@@ -1,27 +1,38 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { IoMdClose } from "react-icons/io";
 import { Link } from 'react-router-dom';
-const Login = () => {
+const Login = ({setlogin}) => {
+  const [studentloginform,setstudentloginform] = useState(true)
+  const changeform = ()=>{
+    setstudentloginform(!studentloginform)
+  }
+
   return (
     <>
     <div className='w-full absolute top-0 left-0 h-screen bg-[#0000004d] flex items-center justify-center'>
         <form className='w-[55vh] rounded h-[68vh] bg-white shadow-sm p-3'>
-            <IoMdClose className='block text-zinc-400 text-[3.5vh] float-end' />
-            <div className='flex mt-8 items-center justify-center gap-1'>
-              <button className='text-[2.5vh] font-medium text-[#00A5EC] border-b-[2.2px] border-[#00A5EC] w-[23vh] py-2'>
+            <IoMdClose onClick={()=>setlogin((prev)=>!prev)} className='block cursor-pointer text-zinc-400 text-[3.5vh] float-end' />
+            <div className='flex mt-8 items-center cursor-pointer justify-center gap-1'>
+              <h3 onClick={changeform} className={`text-[2.5vh] text-center font-medium ${studentloginform ? ' text-[#00A5EC] border-b-[2.2px] border-[#00A5EC]' : ''} w-[23vh] py-2`}>
                 Student
-              </button>
-              <button className='text-[2.5vh] font-medium text-[#00A5EC] border-b-[2.2px] border-[#00A5EC] w-[23vh] py-2'>
+              </h3>
+              <h3 onClick={changeform } className={`text-[2.5vh] text-center font-medium ${!studentloginform ? 'text-[#00A5EC] border-b-[2.2px] border-[#00A5EC]' : ''} w-[23vh] py-2`}>
                 Employer
-              </button>
+              </h3>
             </div>
+          {
+            studentloginform &&
+           <div>
             <button className='flex items-center py-1 w-[46vh] m-auto border-[1px] font-medium border-zinc-300 rounded mt-3 text-zinc-600  justify-center'>
-                <img className='w-[3.8vh] object-cover object-center' src="https://t4.ftcdn.net/jpg/03/08/54/37/240_F_308543787_DmPo1IELtKY9hG8E8GlW8KHEsRC7JiDN.jpg" alt="" />
-                Login With Google
+            <img className='w-[3.8vh] object-cover object-center' src="https://t4.ftcdn.net/jpg/03/08/54/37/240_F_308543787_DmPo1IELtKY9hG8E8GlW8KHEsRC7JiDN.jpg" alt="" />
+            Login With Google
             </button>
             <hr className='mt-4 w-[46vh] m-auto' />
+            <h2  className='font-medium text-[2vh] text-center text-zinc-600'>OR</h2>
+           </div>
+
+          }
            <div className='flex flex-col items-center'>
-                <h2  className='font-medium text-[2vh] text-zinc-600'>OR</h2>
                 
                     <div>
                         <h2 className='font-medium text-zinc-700'>Email</h2>

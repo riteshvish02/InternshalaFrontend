@@ -1,7 +1,6 @@
 import React from 'react'
 
 const Nav = ({Navleft,Navright}) => {
-    console.log(Navleft);
   return (
     <>
       <div className='w-full border-b-[1.7px] shadow-sm items-center justify-between flex h-[10vh] px-[19vh]'>
