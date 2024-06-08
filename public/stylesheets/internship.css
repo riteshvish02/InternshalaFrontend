@@ -1,31 +1,23 @@
 
-  .swiper {
+.swiper {
     width: 100%;
     height: 100%;
   }
   
-  .swiper-slide {
-    text-align: center;
+ .ritesh .swiper-slide {
     font-size: 18px;
     background: #fff;
-    width: 100%!important;
-    height: 25vh;
-    border-radius: 30px;
+
+    width: 95%!important;
+    height: 45vh;
+    border-radius: 20px;
     /* Center slide text vertically */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+   
   }
+    
 
 
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    object-position: center;
-    height: 100%;
-    object-fit: cover;
-  }
+
 
 
   .swiper-button-next::after {
