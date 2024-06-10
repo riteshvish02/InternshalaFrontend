@@ -15,25 +15,31 @@ import 'swiper/css/free-mode';
 import '../../public/stylesheets/styles.css'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination , FreeMode,Navigation, Scrollbar, A11y} from 'swiper/modules';
+import Jobs from './Jobs'
+import Searchbar from './partials/Searchbar'
+import Bottomnav from './Bottomnav'
 
 
 const Home = () => {
   const [isLoginpage,setisLoginpage] = useState(false)
+  const [issearchbar,setsearchbar] = useState(false)
   return (
     <>
         <Nav Navleft={<Navlogin setlogin={setisLoginpage} />} Navright={<Studentnav  />}/>
-        <div className='min-h-screen p-1'>
+         <Searchbar toggle={issearchbar} settoggle={setsearchbar}></Searchbar>
+        <div className='min-h-screen  p-1'>
             {isLoginpage && <Login setlogin={setisLoginpage} ></Login>}
-            <div className='hero1 h-screen px-4'>
-                <div className='search relative mt-2'>
+            <div className='hero1  h-screen '>
+               <div className='job px-4'>
+               <div className='search relative mt-2 '>
                     <form action="">
-                        <IoSearchOutline className='absolute top-3 scale-[1.5] text-zinc-500 left-3' />
-                        <input className='w-[96%] h-[6vh] px-8 focus:border-[#00A5EC] outline-none rounded-md border-zinc-300 border-[0.1px]' type="text" />
+                        <IoSearchOutline className='absolute top-[50%] translate-y-[-50%] scale-[1.5] text-zinc-500 left-3' />
+                        <input onClick={()=>setsearchbar((prev)=>!prev)}  placeholder='Search here...' className='w-[96%] h-[6vh] px-9 focus:border-[#00A5EC] outline-none rounded-md border-zinc-300 border-[0.1px]' type="text" />
                     </form>
                 </div>
                 <h2 className=' mt-[2vh] font-bold text-[3.5vh] text-[#333333]'>Make your dream career a  reality</h2>
                 <h2 className=' mt-[3vh] font-medium text-[3vh] text-[#333333]'>Trending on Internshala 🔥</h2>
-                <div className='swiperdiv ml-[-5%]  w-[90vw] left-0 h-[30vh] py-3 mt-5'>
+                <div className='swiperdiv ml-[-5%]  w-[90vw] left-0  h-[30vh] pt-2 mt-5'>
                     <Swiper 
                             modules={[Navigation,FreeMode, Pagination, Scrollbar, A11y]}
                             spaceBetween={30}
@@ -80,24 +86,16 @@ const Home = () => {
                     
                     </Swiper>
                 </div>
-                <div className='internships'>
-                    <h2 className=' font-bold text-[20px] text-[#333333]'>Latest internships on Internshala</h2>
-                    <h2 className='text-zinc-600  text-[17px] font-medium mt-2'>POPULAR CATEGORIES:</h2>
-                    <div className='w-full  category hide-scrollbar py-2 flex whitespace-nowrap overflow-x-auto '>
-                        <button className='px-2 py-1 ml-2 bg-[#008BDC] rounded-full font-medium text-white'>Big brands</button>
-                        <button className='px-2 py-1 ml-2 border-zinc-400 border rounded-full font-medium text-zinc-700'>Work from home</button>
-                        <button className='px-2 py-1 ml-2 border-zinc-400 border rounded-full font-medium text-zinc-700'>Part-time</button>
-                        <button className='px-2 py-1 ml-2 border-zinc-400 border rounded-full font-medium text-zinc-700'>MBA</button>
-                        <button className='px-2 py-1 ml-2 border-zinc-400 border rounded-full font-medium text-zinc-700'>Engineering</button>
-                        <button className='px-2 py-1 ml-2 border-zinc-400 border rounded-full font-medium text-zinc-700'>Media</button>
-                        <button className='px-2 py-1 ml-2 border-zinc-400 border rounded-full font-medium text-zinc-700'>Design</button>
-                    </div>
-                    <div className='intern swiperdiv ml-[-5%]  w-[90vw] left-0 h-[48vh] py-3 mt-5'>
+               </div>
+                <div className='internships pt-4  bg-[#FAFAFA]'>
                         <Internships/>
-                    </div>
+                </div>
+                <div className='internships pt-4 pb-5  bg-[#FAFAFA]'>
+                        <Jobs/>
                 </div>
             </div>
         </div>
+        <Bottomnav/>
     </>
   )
 }

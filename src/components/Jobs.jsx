@@ -14,11 +14,11 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination , FreeMode,Navigation, Scrollbar, A11y} from 'swiper/modules';
 import { Link } from 'react-router-dom';
 
-const Internships = () => {
+const Jobs = () => {
   return (
     <>  
                     <div className='pl-4 pb-5'>
-                    <h2 className=' font-bold text-[20px] text-[#333333]'>Latest internships on Internshala</h2>
+                    <h2 className=' font-bold text-[20px] text-[#333333]'>Latest jobs on Internshala</h2>
                     <h2 className='text-zinc-600  text-[17px] font-medium mt-2'>POPULAR CATEGORIES:</h2>
                     <div className='w-full  category hide-scrollbar py-2 flex whitespace-nowrap overflow-x-auto '>
                         <button className='px-2 py-1 ml-2 bg-[#008BDC] rounded-full font-medium text-white'>Big brands</button>
@@ -39,10 +39,10 @@ const Internships = () => {
                 // navigation
                 // scrollbar={{ draggable: true }}
             className="mySwiper ritesh px-5 ">           
-                        <SwiperSlide className='border  p-5 flex-col items-start justify-start py-5  border-zinc-400' >
+                        <SwiperSlide className='border  p-5 flex-col items-start justify-start  border-zinc-400' >
                             <button className='px-3 border flex items-end text-sm gap-2 py-1 rounded border-zinc-400'> <IoAnalytics className='scale-[1.2] text-[#00A5EC]' /> <h2>Actively hiring</h2></button>
                             <div className='companydets w-full flex items-center border-b pb-3 gap-1 pt-3'>
-                               <div className='w-[100%] text-left py-2 '>
+                               <div className='w-[100%] text-left '>
                                  <h2 className='font-medium text-[2vh]'>Riteclkssh vish corpratesldlk</h2>
                                  <h3 className='text-[1.6vh] text-zinc-500 font-medium'>planetsparkcjksjakncnds</h3>
                                </div>
@@ -55,8 +55,8 @@ const Internships = () => {
                                 <h2 className='text-[15px]  font-medium flex my-2 items-center gap-2'><PiMoneyDuotone className='font-bold scale-[1.2]' /> Delhi,ahdkknk</h2>
                                 <h2 className='text-[15px]  font-medium flex my-2 items-center gap-2'><CiCalendar className='font-bold scale-[1.2]' /> Delhi,ahdkknk</h2>
                             </div>
-                            <div className='w-full flex absolute bottom-0 left-0 p-3 mt-10 items-center justify-between'>
-                                <Link className='text-sm text-zinc-600 rounded px-2 py-1 bg-zinc-400'>Internship</Link>
+                            <div className='w-full absolute bottom-0 left-0 p-3 flex mt-10 items-center justify-between'>
+                                <Link className='text-sm text-zinc-600 rounded px-2 py-1 bg-zinc-400'>Job</Link>
                                 <Link className='text-base text-[#00A5EC]'>View details</Link>
                             </div>
                         </SwiperSlide>
@@ -93,4 +93,4 @@ const Internships = () => {
   )
 }
 
-export default Internships
+export default Jobs

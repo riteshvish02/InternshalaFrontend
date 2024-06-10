@@ -16,7 +16,7 @@ const Studentsignup = () => {
            <div>
             <button className='flex items-center py-2 w-[55vh] m-auto border-[1px] font-medium border-zinc-300 rounded mt-3 text-zinc-600  justify-center'>
             <img className='w-[3.8vh] object-cover object-center' src="https://t4.ftcdn.net/jpg/03/08/54/37/240_F_308543787_DmPo1IELtKY9hG8E8GlW8KHEsRC7JiDN.jpg" alt="" />
-            Login With Google
+              Login With Google
             </button>
             <hr className='mt-4 w-[46vh] m-auto' />
             <h2  className='font-medium text-[2vh] text-center text-zinc-600'>OR</h2>
