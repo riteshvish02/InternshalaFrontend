@@ -6,7 +6,7 @@ const Employesignup = () => {
   return (
     <>
      <div className='overflow-x-hidden'>
-     <Nav></Nav>
+     {/* <Nav></Nav> */}
       <div className='relative min-h-[150vh] '>
         <div className='w-full relative p-1 h-[110vh] border-b-2'>
             <h2 className='mx-12 mt-8 text-[#212121] text-[8vh] font-bold'>Hire Interns & Freshers <span className='text-[#0073E7] italic'>faster</span></h2>

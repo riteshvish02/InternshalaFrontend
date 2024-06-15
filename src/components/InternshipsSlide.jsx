@@ -14,7 +14,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination , FreeMode,Navigation, Scrollbar, A11y} from 'swiper/modules';
 import { Link } from 'react-router-dom';
 
-const Internships = () => {
+const InternshipsSlide = () => {
   return (
     <>  
                     <div className='pl-4 pb-5'>
@@ -93,4 +93,4 @@ const Internships = () => {
   )
 }
 
-export default Internships
+export default InternshipsSlide

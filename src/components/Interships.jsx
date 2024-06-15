@@ -1,9 +1,9 @@
 import React from 'react'
 import { CiCalendar, CiFilter, CiLocationOn } from "react-icons/ci";
 import { IoAnalytics } from 'react-icons/io5';
-import { PiHouseLineLight, PiMoneyDuotone, PiShoppingBagOpenLight } from 'react-icons/pi';
+import { PiHouseLineLight, PiMoneyDuotone } from 'react-icons/pi';
 import { Link } from 'react-router-dom';
-const Jobs = () => {
+const Interships = () => {
   return (
     <>
       <div className='w-full py-[25%] px-3 bg-[#F8F8F8]  overflow-y-scroll'>
@@ -30,12 +30,11 @@ const Jobs = () => {
                                 </div>
                             </div>
                             <div className='loc text-zinc-600 pt-5'>
-                                <h2 className='text-[14px]  font-medium flex items-center gap-2'><PiHouseLineLight className='font-bold scale-[1.2]' /> Delhi,ahdkknk</h2>
-                                <h2 className='text-[14px]  font-medium flex items-center gap-2'><CiLocationOn className='font-bold scale-[1.2]' /> Delhi,ahdkknk</h2>
-                                <div className='flex items-center gap-2 w-full '>
-                                    <h2 className='text-[13px]  font-medium  flex my-2 items-center gap-2'><PiShoppingBagOpenLight className='font-bold scale-[1.2]' /> Delhi,ahdkknk</h2>
-                                    <h2 className='text-[13px]  font-medium  flex my-2 items-center gap-2'><PiMoneyDuotone className='font-bold scale-[1.2]' /> Delhi,ahdkknk</h2>
-                                    <h2 className='text-[13px]  font-medium  flex my-2 items-center gap-2'><CiCalendar className='font-bold scale-[1.2]' /> Delhi,ahdkknk</h2>
+                                <h2 className='text-[15px]  font-medium flex items-center gap-2'><PiHouseLineLight className='font-bold scale-[1.2]' /> Delhi,ahdkknk</h2>
+                                <h2 className='text-[15px]  font-medium flex items-center gap-2'><CiLocationOn className='font-bold scale-[1.2]' /> Delhi,ahdkknk</h2>
+                                <div className='flex items-center gap-2'>
+                                    <h2 className='text-[15px]  font-medium flex my-2 items-center gap-2'><PiMoneyDuotone className='font-bold scale-[1.2]' /> Delhi,ahdkknk</h2>
+                                    <h2 className='text-[15px]  font-medium flex my-2 items-center gap-2'><CiCalendar className='font-bold scale-[1.2]' /> Delhi,ahdkknk</h2>
                                 </div>
                             </div>
                            
@@ -188,4 +187,4 @@ const Jobs = () => {
   )
 }
 
-export default Jobs
+export default Interships

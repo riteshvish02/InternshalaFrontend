@@ -1,10 +1,9 @@
 import React, { useState,useRef } from 'react'
-import Nav from './Nav'
-import Navlogin from './partials/Navlogin'
-import Studentnav from './partials/Studentnav'
-import Internships from './Internships'
-import Login from './Login'
 
+import Internships from './InternshipsSlide'
+import Login from './Login'
+import Jobs from './JobSlide'
+import Searchbar from './partials/Searchbar'
 import { IoSearchOutline } from "react-icons/io5";
 //swiper
 import 'swiper/css';
@@ -15,9 +14,7 @@ import 'swiper/css/free-mode';
 import '../../public/stylesheets/styles.css'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination , FreeMode,Navigation, Scrollbar, A11y} from 'swiper/modules';
-import Jobs from './Jobs'
-import Searchbar from './partials/Searchbar'
-import Bottomnav from './Bottomnav'
+
 
 
 const Home = () => {
@@ -25,11 +22,10 @@ const Home = () => {
   const [issearchbar,setsearchbar] = useState(false)
   return (
     <>
-        <Nav Navleft={<Navlogin setlogin={setisLoginpage} />} Navright={<Studentnav  />}/>
-         <Searchbar toggle={issearchbar} settoggle={setsearchbar}></Searchbar>
+        <Searchbar toggle={issearchbar} settoggle={setsearchbar}></Searchbar>
         <div className='min-h-screen  p-1'>
             {isLoginpage && <Login setlogin={setisLoginpage} ></Login>}
-            <div className='hero1  h-screen '>
+            <div className='hero1 pt-[25%]   h-screen '>
                <div className='job px-4'>
                <div className='search relative mt-2 '>
                     <form action="">
@@ -90,12 +86,11 @@ const Home = () => {
                 <div className='internships pt-4  bg-[#FAFAFA]'>
                         <Internships/>
                 </div>
-                <div className='internships pt-4 pb-5  bg-[#FAFAFA]'>
+                <div className='internships pt-4 pb-[25%]  bg-[#FAFAFA]'>
                         <Jobs/>
                 </div>
             </div>
         </div>
-        <Bottomnav/>
     </>
   )
 }
