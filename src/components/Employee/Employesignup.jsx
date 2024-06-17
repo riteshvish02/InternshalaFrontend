@@ -7,38 +7,39 @@ const Employesignup = () => {
     <>
      <div className='overflow-x-hidden'>
      {/* <Nav></Nav> */}
-      <div className='relative min-h-[150vh] '>
-        <div className='w-full relative p-1 h-[110vh] border-b-2'>
-            <h2 className='mx-12 mt-8 text-[#212121] text-[8vh] font-bold'>Hire Interns & Freshers <span className='text-[#0073E7] italic'>faster</span></h2>
-            <h3 className=' mx-12 mt-1 text-[#212121] text-[4vh] font-medium    '>Post Internships for Free & Hire Talent with up to 2 Years of Experience</h3>
-        <form className='w-[58vh] absolute right-4 top-2 mt-8  shadow-blue-300 border rounded-xl h-[100vh] bg-white shadow-md p-3'>
+      <div className='relative min-h-[150vh]  py-[15%]'>
+        <div className='w-full  p-1 h-[110vh] border-b-2'>
+            <h2 className='mx-3 mt-8 text-[#212121] text-[3.5vh] whitespace-nowrap font-bold'>Hire Interns & Freshers <br /> <span className='text-[#0073E7] italic'>faster</span></h2>
+            <h3 className='mx-3  mt-1 text-center text-[#212121] text-[2vh] font-medium    '>Post Internships for Free & Hire Talent with up to 2 Years of Experience</h3>
+            <img className=' w-full h-[30%] object-cover object-center top-0 z-[-1]' src={`https://internshala.com/static/images/registration/employer/registration_new/images/banner/r1920_banner_new.png`} alt="" />
+        <form className='w-[90%]  m-auto mt-5  shadow-blue-300 border rounded-xl h-[80vh] bg-white  shadow-md p-3'>
             <div className='flex mt-8 items-center cursor-pointer justify-center gap-1'>
             </div>
-           <div className='flex flex-col items-center'>
-                    <div>
+           <div className='flex flex-col items-center w-full'>
+                    <div className='w-full'>
                         <h2 className='font-medium text-zinc-700'>Official Email Id</h2>
-                        <input className='py-[8px] mt-1 w-[55vh] rounded px-3 border-[1px] outline-[3px] outline-none focus:border-[#00A5EC] border-zinc-300' placeholder='ritesh@gmail.com' type="text" />
+                        <input className='py-[8px] mt-1 w-full rounded px-3 border-[1px] outline-[3px] outline-none focus:border-[#00A5EC] border-zinc-300' placeholder='ritesh@gmail.com' type="text" />
                     </div>
-                    <div className='mt-4'>
+                    <div className='mt-4 w-full'>
                         <h2 className='font-medium text-zinc-700'>Password</h2>
-                        <input className='py-[8px] mt-1 w-[55vh] rounded px-3 border-[1px] outline-[3px] outline-none focus:border-[#00A5EC] border-zinc-300' placeholder='password must be strong' type="text" />
+                        <input className='py-[8px] mt-1 w-full rounded px-3 border-[1px] outline-[3px] outline-none focus:border-[#00A5EC] border-zinc-300' placeholder='password must be strong' type="text" />
                     </div>
-                    <div className='mt-4'>
+                    <div className='mt-4 w-full'>
                         <h2 className='font-medium text-zinc-700'>Contact</h2>
-                        <input className='py-[8px] mt-1 w-[55vh] rounded px-3 border-[1px] outline-[3px] outline-none focus:border-[#00A5EC] border-zinc-300' placeholder='Your mobile number' type="text" />
+                        <input className='py-[8px] mt-1 w-full rounded px-3 border-[1px] outline-[3px] outline-none focus:border-[#00A5EC] border-zinc-300' placeholder='Your mobile number' type="text" />
                     </div>
-                    <div className='mt-4'>
+                    <div className='mt-4 w-full'>
                         <h2 className='font-medium text-zinc-700'>Organization</h2>
-                        <input className='py-[8px] mt-1 w-[55vh] rounded px-3 border-[1px] outline-[3px] outline-none focus:border-[#00A5EC] border-zinc-300' placeholder='Organization name' type="text" />
+                        <input className='py-[8px] mt-1 w-full rounded px-3 border-[1px] outline-[3px] outline-none focus:border-[#00A5EC] border-zinc-300' placeholder='Organization name' type="text" />
                     </div>
-                    <div className='mt-4 flex gap-10'>
+                    <div className='mt-4 w-full flex gap-10'>
                        <div>
                           <h2 className='font-medium text-zinc-700'>First Name</h2>
-                            <input className='py-[8px] mt-1 w-[25vh] rounded px-3 border-[1px] outline-[3px] outline-none focus:border-[#00A5EC] border-zinc-300' placeholder='jhon' type="text" />
+                            <input className='py-[8px] mt-1 w-full rounded px-3 border-[1px] outline-[3px] outline-none focus:border-[#00A5EC] border-zinc-300' placeholder='jhon' type="text" />
                        </div>
                        <div>
                           <h2 className='font-medium text-zinc-700'>Last Name</h2>
-                            <input className='py-[8px] mt-1 w-[25vh] rounded px-3 border-[1px] outline-[3px] outline-none focus:border-[#00A5EC] border-zinc-300' placeholder='doe' type="text" />
+                            <input className='py-[8px] mt-1 w-full rounded px-3 border-[1px] outline-[3px] outline-none focus:border-[#00A5EC] border-zinc-300' placeholder='doe' type="text" />
                        </div>
                     </div>
                     <div className='mt-4 flex gap-10'>
@@ -52,14 +53,13 @@ const Employesignup = () => {
                       
                     </div>
            </div>
-           <button className='flex bg-[#00A5EC] items-center py-2 w-[55vh] m-auto border-[1px] font-medium border-zinc-300 rounded mt-3 text-white justify-center'>
+           <button className='flex w-full bg-[#00A5EC] items-center py-2  m-auto border-[1px] font-medium border-zinc-300 rounded mt-3 text-white justify-center'>
             Sign up
            </button>
            <h2 className='mt-3 text-center font-medium'>Already registered? <span className='font-medium text-[#00A5EC]'><Link>Login</Link></span></h2>
         </form>     
-            <img className='absolute w-full h-full object-cover object-center top-0 z-[-1]' src={`https://internshala.com/static/images/registration/employer/registration_new/images/banner/r1920_banner_new.png`} alt="" />
         </div>
-        <div className='w-full h-[60vh] pl-[20vh] pt-[8vh]'>
+        <div className='w-full bg-red-400 hidden '>
             <h2 className='text-4xl font-semibold'>Why Hire from Internshala?</h2>
             <h3 className='font-medium text-[#33333] text-xl mt-3'>Post your intern requirements and build your dream team with ease.</h3>
             <div className='border-[1.8px] mt-8 flex items-center justify-center rounded-md h-[30vh] border-[#22222] w-[80vw]'>
