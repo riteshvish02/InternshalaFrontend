@@ -2,14 +2,16 @@ import React from 'react'
 import Nav from '../Nav'
 import { Link } from 'react-router-dom'
 import { IoMdClose } from 'react-icons/io'
+import Login from '../Login'
 
-const Studentsignup = () => {
+const Studentsignup = ({isLoginpage,setisLoginpage}) => {
   return (
     <div className='w-[100vw] overflow-x-hidden'>
-      <div className=' items-center py-[25%] flex flex-col'>
-        <h2 className='text-[3vh] font-bold text-[#333333]'>Sign-up and apply for free</h2>
-        <h3 className='text-base text-[#333333] mt-3 font-medium'>1,50,000+ companies hiring on Internshala</h3>
-        <form className='w-full h-full   shadow-blue-300 border  bg-white p-3'>
+            {isLoginpage && <Login setlogin={setisLoginpage} ></Login>}
+      <div className=' items-center py-[25%] lg:py-[8%] flex flex-col'>
+        <h2 className='text-[3vh] font-bold text-[#333333] lg:text-5xl'>Sign-up and apply for free</h2>
+        <h3 className='text-base text-[#333333] lg:text-2xl mt-3 font-medium'>1,50,000+ companies hiring on Internshala</h3>
+        <form className='w-full h-full lg:mt-5 lg:shadow-lg lg:rounded-[20px] lg:w-[30%]  lg:shadow-blue-300 border  bg-white p-3'>
             <div className='flex mt-8 items-center cursor-pointer justify-center gap-1'>
             </div>
            <div>

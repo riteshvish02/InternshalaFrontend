@@ -1,55 +1,65 @@
-
 .swiper {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  height: 35vh;
+  border-radius: 20px;
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  object-position: center;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color: black !important;
+  scale: 0.6;
+  position: absolute;
+  bottom: 50%!important;
+  transform: translateY(50%);
+  padding: 2vh 3vh;
+  background-color: #2333;
+  border-radius: 100%;
+}
+
+.swiper-button-next::after {
+  right: 20%;
+}
+
+.swiper-button-prev::after {
+  left: 55%;
+}
+
+.hide-scrollbar {
+  overflow: scroll;
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
+
+.slide-custom {
+  width: 90vw!important; /* Default width for small screens */
+}
+
+@media (min-width: 1024px) {
+  .slide-custom {
+    width: 600px!important; /* Custom width for lg screens */
   }
-  
- .ritesh .swiper-slide {
-    font-size: 18px;
-    background: #fff;
-
-    width: 95%!important;
-    height: 42vh;
-    border-radius: 20px;
-    /* Center slide text vertically */
-   
-  }
-    
-
-
-
-
-
-  .swiper-button-next::after {
-    color: black !important;
-    scale: 0.6;
-    z-index: 99999!important;
-    position: absolute;
-    background-color: #2333;
-    padding: 2vh 3vh;
-    border-radius:100%;
-    bottom: 50%!important;
-    transform: translateY(50%);
-    right: 20%;
-  }
-  .swiper-button-prev::after {
-    color: black !important;
-    scale: 0.6;
-    position: absolute;
-    left: 55%;
-     bottom: 50%!important;
-    transform: translateY(50%);
-    padding: 2vh 3vh;
-    background-color: #2333;
-    border-radius:100%;
-  }
-
-  .hide-scrollbar {
-    overflow: scroll;
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-    scrollbar-width: none;  /* Firefox */
-  }
-  
-  .hide-scrollbar::-webkit-scrollbar { 
-    display: none;  /* Safari and Chrome */
-  }
+}

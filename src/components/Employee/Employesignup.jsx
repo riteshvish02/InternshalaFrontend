@@ -1,18 +1,19 @@
 import React from 'react'
 import Nav from '../Nav'
 import { Link } from 'react-router-dom'
+import Login from '../Login'
 
-const Employesignup = () => {
+const Employesignup = ({isLoginpage,setisLoginpage}) => {
   return (
     <>
      <div className='overflow-x-hidden'>
-     {/* <Nav></Nav> */}
-      <div className='relative min-h-[150vh]  py-[15%]'>
-        <div className='w-full  p-1 h-[110vh] border-b-2'>
-            <h2 className='mx-3 mt-8 text-[#212121] text-[3.5vh] whitespace-nowrap font-bold'>Hire Interns & Freshers <br /> <span className='text-[#0073E7] italic'>faster</span></h2>
-            <h3 className='mx-3  mt-1 text-center text-[#212121] text-[2vh] font-medium    '>Post Internships for Free & Hire Talent with up to 2 Years of Experience</h3>
-            <img className=' w-full h-[30%] object-cover object-center top-0 z-[-1]' src={`https://internshala.com/static/images/registration/employer/registration_new/images/banner/r1920_banner_new.png`} alt="" />
-        <form className='w-[90%]  m-auto mt-5  shadow-blue-300 border rounded-xl h-[80vh] bg-white  shadow-md p-3'>
+     {isLoginpage && <Login setlogin={setisLoginpage} ></Login>}
+      <div className='relative  min-h-[100vh]  py-[15%] lg:py-[5%] '>
+        <div className='w-full  p-1 lg:h-[120vh] h-[110vh]  border-b-2'>
+            <h2 className='mx-3 mt-8 text-[#212121] text-[3.5vh] whitespace-nowrap font-bold lg:text-7xl'>Hire Interns & Freshers <br className='lg:hidden' /> <span className='text-[#0073E7] italic'>faster</span></h2>
+            <h3 className='mx-3  mt-1 text-center text-[#212121] text-[2vh] font-medium  lg:float-left  lg:text-2xl ;g:text-zinc-800 '>Post Internships for Free & Hire Talent with up to 2 Years of Experience</h3>
+            <img className=' w-full lg:h-[100%] h-[30%] object-cover object-center lg:absolute  top-0 lg:z-[-1]' src={`https://internshala.com/static/images/registration/employer/registration_new/images/banner/r1920_banner_new.png`} alt="" />
+        <form className='w-[90%]  lg:w-[25%] lg:float-right lg:mr-6 lg:mt-0 m-auto mt-5  shadow-blue-300 border rounded-xl h-[80vh] lg:h-[90vh] bg-white  shadow-md p-3'>
             <div className='flex mt-8 items-center cursor-pointer justify-center gap-1'>
             </div>
            <div className='flex flex-col items-center w-full'>

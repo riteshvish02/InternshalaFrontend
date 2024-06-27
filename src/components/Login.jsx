@@ -9,7 +9,7 @@ const Login = ({setlogin}) => {
 
   return (
     <>
-    <div className='w-full  absolute top-0 left-0 h-screen bg-[#0000004d] flex items-center justify-center'>
+    <div className='w-full z-[999999999] absolute top-0 left-0 h-screen bg-[#0000004d] flex items-center justify-center'>
         <form className='w-[55vh] rounded h-[68vh] bg-white shadow-sm p-3'>
             <IoMdClose onClick={()=>setlogin((prev)=>!prev)} className='block cursor-pointer text-zinc-400 text-[3.5vh] float-end' />
             <div className='flex mt-8 items-center cursor-pointer justify-center gap-1'>

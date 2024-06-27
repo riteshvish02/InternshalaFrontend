@@ -18,17 +18,17 @@ const Searchbar = ({toggle,settoggle}) => {
     // console.log(selectedOption);
   return (
     <>
-      <div className={`w-full absolute bg-white z-[99999] top-0 h-screen  ${toggle ? 'block' : 'hidden'} bg-red p-5`}>
+      <div className={`w-full absolute  bg-white z-[999999999] top-0 h-screen  ${toggle ? 'block' : 'hidden'} bg-red p-5`}>
        <IoMdClose onClick={()=>settoggle((prev)=>!prev)}  className='block cursor-pointer scale-[1.4]  float-end' />
-         <div className='mt-8'>
+         <div className='mt-8 lg:w-[70%] lg:m-auto'>
                 <h2 className='mb-2'>Looking for</h2>
             <form action="">
-                <div className="relative   text-left w-full ">
+                <div className="relative z-30   text-left w-full  ">
                     <div>
                         <button
                             type="button"
                             onClick={toggleDropdown}
-                            className={`inline-flex justify-between h-[5vh] w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium ${
+                            className={`inline-flex justify-between h-[5vh] lg:h-[8vh] lg:pt-5 w-full rounded-md border border-gray-300 shadow-sm px-4  py-2 bg-white text-sm font-medium ${
                                 selectedOption ? 'text-blue-600' : 'text-gray-700'
                             } hover:bg-gray-50 focus:outline-none  focus:ring-offset-2 focus:ring-indigo-500`}
                         >
@@ -57,7 +57,7 @@ const Searchbar = ({toggle,settoggle}) => {
                                         key={option}
                                         type="button"
                                         onClick={() => handleOptionClick(option)}
-                                        className={`block px-4 py-2 text-sm w-full text-left ${
+                                        className={`block px-4 py-2 text-sm lg:text-xl   w-full text-left ${
                                             selectedOption === option ? 'bg-blue-100 text-blue-600' : 'text-gray-700 hover:bg-gray-100'
                                         }`}
                                         role="menuitem"
@@ -69,12 +69,13 @@ const Searchbar = ({toggle,settoggle}) => {
                         </div>
                     )}
                 </div>
-                <div className='relative mt-3 w-full'>
-                        <IoSearchOutline className='absolute top-[50%] translate-y-[-50%] scale-[1.5] text-zinc-500 left-3' />
-                        <input  placeholder='Search here...' className='w-[100%] h-[5vh] px-9 focus:border-[#00A5EC] outline-none rounded-md border-zinc-300 border-[0.1px]' type="text" />
+                <div className='relative mt-3 w-full '>
+                        <IoSearchOutline className='absolute top-[50%] translate-y-[-50%]  scale-[1.5] text-zinc-500 left-3' />
+                        <input  placeholder='Search here...' className='w-[100%]  h-[5vh] lg:h-[8vh] px-9 focus:border-[#00A5EC] outline-none rounded-md border-zinc-300 border-[0.1px]' type="text" />
                 </div>
             </form>
-            <h2 className='mt-8 text-[15px] font-medium' >POPULAR CITIES</h2>
+            <div className='lg:border lg:border-zinc-400 rounded-[10px] lg:p-5 lg:pt-0 lg:mt-5'>
+            <h2 className='mt-8 text-[15px] font-medium ' >POPULAR CITIES</h2>
             <form  className='px-1 w-full mt-1 flex-wrap text-[14px]' action="">
             <button className='px-3 py-1 ml-2 border-zinc-300 mt-3  border rounded-full font-medium text-zinc-700'>Delhi</button>
             <button className='px-3 py-1 ml-2 border-zinc-300 mt-3 border rounded-full font-medium text-zinc-700'>Banglore</button>
@@ -93,6 +94,7 @@ const Searchbar = ({toggle,settoggle}) => {
                         <button className='px-3 mt-2 py-1 ml-3 border-zinc-400 border rounded-full font-medium text-zinc-700'>Media</button>
                         <button className='px-3 mt-2 py-1 ml-3 border-zinc-400 border rounded-full font-medium text-zinc-700'>Design</button>
             </form>
+            </div>
          </div>
       </div>
     </>
